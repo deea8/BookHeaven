@@ -1,0 +1,296 @@
+﻿html {
+    position: relative;
+    font-size: 14px;
+    min-height: 100%;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+/* Button styles */
+.btn-signup,
+.btn-login, .btn-borrow {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 15px;
+    padding: 4px 8px;
+    margin-inline: 2px;
+}
+
+.btn-pag-signup, .btn-pag-login {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+.center-btn {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btn-signup:hover, .btn-login:hover, .btn-pag-signup:hover, .btn-pag-login:hover {
+    background-color: #0056b3;
+}
+
+/* Background image styles */
+body {
+    background-image: url('/background.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    align-items: flex-start;
+    padding-bottom: 50px;
+}
+
+.navbar {
+    background-color: transparent;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+    color: #000000;
+}
+
+.footer {
+    text-align: center;
+    color: white;
+}
+
+footer.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.form-container {
+    position: center;
+    width: 420px;
+    height: 540px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 2px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.name {
+    justify-content: space-between;
+    display: flex;
+}
+
+#firstname, #lastname {
+    margin-block: 2px;
+    border-radius: 15px;
+    width: 145px;
+}
+
+#username, #password, #email, #phonenumber {
+    margin-block: 2px;
+    border-radius: 15px;
+    width: 300px;
+}
+
+.exist-account, .not-exist-account {
+    text-align: center;
+    margin-top: 6px;
+}
+
+.container-signup, .container-login {
+    position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.pop-books-cont, .new-books-cont {
+    margin-top: 20px;
+    align-self: flex-start;
+}
+
+.book-container-all {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px; 
+    justify-content: center; 
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+.book-container {
+    align-items: center;
+    margin-top: 10px;
+    margin-right: 20px;
+    text-align: center;
+    position: relative;
+}
+
+    .book-container img {
+        width: 200px;
+        height: 300px;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        transition: transform 0.3s ease;
+    }
+
+        .book-container img:hover {
+            transform: scale(1.1);
+        }
+
+    .book-container p {
+        font-size: 20px;
+        color: #000;
+        text-align: center;
+        max-width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: pre-wrap;
+    }
+
+.form-group.center-btn {
+    position: relative;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+}
+
+/* Description page styles */
+.container-description {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.title-bar {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    background-color: rgba(121, 42, 42, 0.9);
+    color: white;
+    font-family: 'Almendra', sans-serif;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+    .title-bar h3 {
+        margin: 0;
+        font-family: 'Almendra', sans-serif;
+    }
+
+.content-container {
+    display: flex;
+}
+
+.description-image {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+    .description-image img {
+        width: 55%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+
+.form-group.left-btn {
+}
+
+.description-text {
+    flex: 4;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    margin-right: 30px;
+}
+
+
+.container-description p {
+    margin-bottom: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.form-container {
+    flex: 1;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.left-btn .btn {
+    width: 120px;
+}
+
+.content {
+    border: 2px solid #ccc;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.additional-info {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 7px;
+    text-align: center;
+    border-radius: 10px;
+    width: 220px;
+}
+
+.line {
+    border-top: 1px solid black;
+    margin: 10px 0;
+}
+
+.inline-form {
+    display: flex;
+    align-items: center;
+}
+
+    .inline-form .form-control {
+        margin-right: 0.5rem;
+    }
+
+    .inline-form .btn {
+        margin-left: 0.5rem;
+    }

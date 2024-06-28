@@ -1,0 +1,16 @@
+﻿@model BookHeaven.Models.ViewModels.AdminDashboardViewModel
+
+@{
+    ViewBag.Title = "Admin Dashboard";
+}
+<body>
+<div class="d-flex justify-content-center align-items-center">
+    <div class="btn-group-vertical text-center">
+        <a asp-controller="Publishers" asp-action="Index" class="btn btn-primary btn-lg mb-3">Manage Publishers</a>
+        <a asp-controller="Authors" asp-action="Index" class="btn btn-primary btn-lg mb-3">Manage Authors</a>
+        <a asp-controller="Books" asp-action="IndexAdmin" class="btn btn-primary btn-lg mb-3">Manage Books</a>
+        <a asp-controller="Branches" asp-action="Index" class="btn btn-primary btn-lg mb-3">Manage Branches</a>
+        <a asp-controller="Borrows" asp-action="IndexAdmin" class="btn btn-primary btn-lg mb-3">Manage Borrows</a>
+    </div>
+</div>
+</body>

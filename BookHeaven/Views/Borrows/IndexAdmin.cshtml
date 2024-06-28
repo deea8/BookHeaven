@@ -1,0 +1,58 @@
+﻿@model IEnumerable<BookHeaven.Models.Borrow>
+
+@{
+    ViewData["Title"] = "Index";
+    var errorMessage = TempData["ErrorMessage"] as string;
+}
+
+@if (!string.IsNullOrEmpty(errorMessage))
+{
+    <div class="alert alert-danger" role="alert">
+        @errorMessage
+    </div>
+}
+
+<h1>Index</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Borrower
+            </th>
+            <th>
+                Book ID
+            </th>
+            <th>
+                Borrow Date
+            </th>
+            <th>
+                Due Date
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.User.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BookId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BorrowDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DueDate)
+                </td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.BorrowId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.BorrowId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,37 @@
+﻿@model IEnumerable<BookHeaven.Models.Book>
+
+@{
+    ViewBag.Title = "All Books Added";
+}
+
+<div class="home-container">
+    <div class="pop-books-cont">
+        <h3>Explore Books</h3>
+        @if (Model == null || !Model.Any())
+        {
+            <p>No books found.</p>
+        }
+        else
+        {
+            <div class="book-container-all">
+                @foreach (var book in Model)
+                {
+                    <div class="book-container">
+                        <a asp-area="" asp-controller="Books" asp-action="Details" asp-route-id="@book.BookId">
+                            <img src="@book.ImageUrl" alt="Book Cover of @book.Title" onerror="handleImageError(this)">
+                        </a>
+                        <p>@book.Title</p>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+</div>
+
+<script>
+    function handleImageError(image) {
+        image.onerror = null; // Prevents an infinite loop if the placeholder image also fails to load
+        image.src = 'https://via.placeholder.com/150'; // URL to your placeholder image
+    }
+</script>
+ 

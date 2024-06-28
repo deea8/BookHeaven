@@ -1,0 +1,94 @@
+﻿@model IEnumerable<BookHeaven.Models.Book>
+@{
+    ViewData["Title"] = "Books";
+}
+
+<h1>Books</h1>
+
+<p>
+@*     <a asp-action="Create">Create New</a> *@
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Cover
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Publisher.Name)
+            </th>
+            <th>
+                Authors
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.BookId">
+                        <img src="@item.ImageUrl" alt="Cover Image" style="width: 100px; height: 150px;" />
+                    </a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Publisher.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Author.Name)
+                </td>
+                <td>
+@*                     <a asp-action="Edit" asp-route-id="@item.BookId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.BookId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.BookId">Delete</a> *@
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+@* 
+
+<div class="home-container">
+    <div class="pop-books-cont">
+        <h3>Explore Books</h3>
+        @if (Model == null || !Model.Any())
+        {
+            <p>No books found.</p>
+        }
+        else
+        {
+            <div class="book-container-all">
+                @foreach (var book in Model)
+                {
+                    <div class="book-container">
+                        <a asp-area="" asp-controller="Books" asp-action="Details" asp-route-id="@book.BookId">
+                            <img src="@book.ImageUrl" alt="Book Cover of @book.Title" onerror="handleImageError(this)">
+                        </a>
+                        <p>@book.Title</p>
+                        <div class="form-group center-btn">
+                            <a class="btn btn-borrow" asp-area="" asp-controller="Home" asp-action="Borrow" asp-route-id="@book.BookId">Borrow</a>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+</div>
+
+<script>
+    function handleImageError(image) {
+        image.onerror = null; // Prevents an infinite loop if the placeholder image also fails to load
+        image.src = 'https://via.placeholder.com/150'; // URL to your placeholder image
+    }
+</script>
+ *@

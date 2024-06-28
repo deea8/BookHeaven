@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookHeaven", "BookHeaven\BookHeaven.csproj", "{1F2B836A-5FDD-4EC8-B4D5-C4B2AF15FC1B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTest", "UnitTest\UnitTest.csproj", "{1BD4B693-47F1-4C54-9751-26AB4F43B182}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F2B836A-5FDD-4EC8-B4D5-C4B2AF15FC1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F2B836A-5FDD-4EC8-B4D5-C4B2AF15FC1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F2B836A-5FDD-4EC8-B4D5-C4B2AF15FC1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F2B836A-5FDD-4EC8-B4D5-C4B2AF15FC1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BD4B693-47F1-4C54-9751-26AB4F43B182}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BD4B693-47F1-4C54-9751-26AB4F43B182}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BD4B693-47F1-4C54-9751-26AB4F43B182}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BD4B693-47F1-4C54-9751-26AB4F43B182}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4C53141B-57FB-4D36-A74A-3D4BCA8825D7}
+	EndGlobalSection
+EndGlobal
